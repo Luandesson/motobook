@@ -8,7 +8,8 @@ def menu():
     print("\n=== MONITOR DE GASTOS DA MOTO ===")
     print("1 - Adicionar abastecimento")
     print("2 - Registrar troca de óleo")
-    print("3 - Ver relatório de consumo")
+    print("3 - Ver relatório desde a última troca de óleo")
+    print("4 - Ver dashboard geral de consumo")
     print("0 - Sair")
 
 def main():
@@ -20,11 +21,12 @@ def main():
 
         if opcao == "1":
             try:
+                posto = input("Fala motoca, informe o posto que vocÊ esta abastecendo? ")
                 data = input("Data do abastecimento (dd/mm/aaaa): ")
                 litros = float(input("Quantidade de litros abastecidos: "))
                 valor = float(input("Valor total pago: R$ "))
                 km_atual = int(input("KM atual: "))
-                moto.adicionar_abastecimento(data, litros, valor, km_atual)
+                moto.adicionar_abastecimento(posto, data, litros, valor, km_atual)
             except ValueError:
                 print("Erro nos dados inseridos. Tente novamente.")
         
@@ -33,6 +35,9 @@ def main():
 
         elif opcao == "3":
             moto.relatorio()
+            
+        elif opcao == "4":
+            moto.dashboard_consumo_geral()
 
         elif opcao == "0":
             print("Saindo... Até mais!")
@@ -42,3 +47,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
