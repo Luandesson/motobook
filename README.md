@@ -1,4 +1,4 @@
-# Motobook
+# Motobook [![My Skills](https://skillicons.dev/icons?i=py&theme=light)](https://skillicons.dev)
 
 Motobook é um projeto inicial de uma calculadora simples feita para ajudar motoboys e toda a comunidade motoqueira a controlar gastos de gasolina por km rodado, troca de óleo, e outras manutenções básicas.
 
